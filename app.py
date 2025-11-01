@@ -13,5 +13,13 @@ def login():
     else:
         return redirect(url_for('home'))
 
+@app.route('/sobre')
+def sobre():
+    return render_template('sobre.html')
+
+@app.route('/contato')
+def contato():
+    return render_template('contato.html')
+
 if __name__ == '__main__':
     app.run(host='0.0.0.0', debug=True)
